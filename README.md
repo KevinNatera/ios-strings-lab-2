@@ -70,6 +70,13 @@ Sample Input: `"Swift is the best language"`
 
 Sample Output: `"language best the is Swift"`
 
+var aString = "Swift is the best language"
+var array = aString.components(separatedBy: " ")
+
+for char in array.reversed() {
+print(char + " ", terminator: "")
+}
+
 
 ## Question 4
 
