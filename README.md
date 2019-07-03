@@ -9,7 +9,11 @@ You are given a string stored in variable `problem`. Write code so that you prin
 ```swift
 var problem = "split this string into words and print them on separate lines"
 
-// Your code
+var solution: [String] = problem.components(separatedBy: " ")
+
+for word in solution {
+  print(word)
+}
 ```
 
 Example
@@ -40,6 +44,19 @@ Given a string `testString` create a new variable called `condensedString` that 
 ```swift
 let testString = "  How   about      thesespaces  ?  "
 //condensedString = " How about thesespaces ? "
+
+let testString = "  How   about      these spaces  ?  "
+var array = testString.components(separatedBy: .whitespacesAndNewlines)
+var condensedString  = ""
+
+for i in array {
+if i == ""{
+continue
+}
+condensedString.append(i + " ")
+}
+print(condensedString)
+
 ```
 
 
@@ -63,6 +80,26 @@ Example:
 Sample Input: `"danaerys dad cat civic bottle"`
 
 Sample Output: `2`
+
+func palindromeCheck(str:String)-> Bool{
+let reversedStr = String(str.reversed())
+if str == reversedStr {
+return true
+} else {
+return false
+}
+}
+
+var input = "danaerys dad cat civic bottle"
+var array = input.components(separatedBy: " ")
+var palindromes = 0
+
+for word in array {
+if(palindromeCheck(str: word)){
+palindromes += 1}
+}
+print("palindromes:" , palindromes)
+
 
 
 ## Question 5
